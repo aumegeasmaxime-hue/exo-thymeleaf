@@ -21,6 +21,9 @@ public class ArticleServices {
         listArticle.add(new Article(4L,"azerty", "Clavier","AZERTY"));
         return listArticle;
     }
+    public List<Article> getAllArticle() {
+        return repository.findAll();
+    }
     public Article findArticleById (Long id){
         return repository.findById(id)
                 .orElseThrow(()->new IllegalArgumentException("Software Engineerwith id " + id + " not found"));
