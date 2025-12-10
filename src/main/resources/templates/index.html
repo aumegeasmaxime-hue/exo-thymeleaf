@@ -2,14 +2,35 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Mon Blog</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
 <body>
-    <div th:each="model :${models} ">
-        <span th:text="${model.id}"></span>
-        <span th:text="${model.titre}"></span>
-        <span th:text="${model.author}"></span>
-        <span th:text="${model.contenu}"></span>
+    <header>
+        <div>
+            <h2 id="entete">Mon Blog</h2>
+        </div>
+    </header>
+    <main>
+    <div>
+        <a th:href="@{/new}"><button class="bouton">Crée nouvel article</button></a>
     </div>
+    <div th:each="model :${models} ">
+        <a th:href="@{/{id}(id=${model.id})}"><button th:text="${model.title}" class="bouton"></button></a>
+        <span th:text="${model.author}"></span>
+        <a th:href="@{/{id}/modifier(id=${model.id})}"><button class="bouton">Modifier</button></a>
+        <a th:href="@{/{id}/delete(id=${model.id})}"><button class="bouton">Delete</button></a>
+    </div>
+    <div>
+        <form th:action="@{/author}" method="get">
+        <label for="author">recherce d'article par auteur:</label>
+        <input type="search"  id="author" name="author" />
+        <button>Search</button>
+        </form>
+
+    </div>
+
+    </main>
+
 </body>
 </html>

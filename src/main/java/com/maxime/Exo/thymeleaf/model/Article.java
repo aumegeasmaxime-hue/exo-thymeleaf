@@ -17,8 +17,7 @@ public class Article {
     public Article() {
     }
 
-    public Article(Long id, String title, String author, String contenu) {
-        this.id = id;
+    public Article(String title, String author, String contenu) {
         this.title = title;
         this.author = author;
         this.contenu = contenu;

@@ -1,0 +1,17 @@
+#entete {
+    background-color:red;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    font-family: Apple Chancery, cursive;
+    width: 100%;
+    border-radius: 20px;
+}
+.bouton {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+
+
+
+
+}
