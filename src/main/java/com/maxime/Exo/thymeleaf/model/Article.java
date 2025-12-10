@@ -14,6 +14,9 @@ public class Article {
     private String author;
     private String contenu;
 
+    public Article() {
+    }
+
     public Article(Long id, String title, String author, String contenu) {
         this.id = id;
         this.title = title;

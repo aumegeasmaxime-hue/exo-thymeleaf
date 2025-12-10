@@ -31,9 +31,9 @@ public class ArticleServices {
     public void createNewArticle(Article article) {
         repository.save(article);
     }
-    public void modifyArticle(Long id, Map<String, Object> update) {
+    public void modifyArticle(Long id, Map<String,Object> modifyArticle) {
         Article articleUpdate = findArticleById(id);
-        update.forEach((key , value)->{
+        modifyArticle.forEach((key,value)->{
             Field filed = ReflectionUtils.findField(Article.class , key);
             if (filed != null){
                 filed.setAccessible(true);
