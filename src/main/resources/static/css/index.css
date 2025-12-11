@@ -7,11 +7,12 @@
     width: 100%;
     border-radius: 20px;
 }
-.bouton {
-    font-size: 25px;
+#boutonTitre {
+    font-size: 20px;
     font-family: Arial, sans-serif;
-
-
-
+}
+.bouton {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
 
 }

@@ -63,10 +63,9 @@ public class ArticleController {
         return "redirect:/";
     }
     @GetMapping("/author")
-    public String findByAutor (String author,Model model){
-        System.out.println(author);
-        //articleServices.findArticleByAuthor(author);
-        return "detail";
+    public String findByAutor(String author,Model model){
+        model.addAttribute("models",articleServices.findArticleByAuthor(author));
+        return "index";
     }
 
 

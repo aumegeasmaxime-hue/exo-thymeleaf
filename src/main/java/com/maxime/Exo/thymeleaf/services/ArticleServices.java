@@ -40,8 +40,9 @@ public class ArticleServices {
         Article deleteArticle = findArticleById(id);
         repository.delete(deleteArticle);
     }
-    public void findArticleByAuthor(String author){
-        repository.findByAuthor(author);
+    public List<Article> findArticleByAuthor(String author){
+        return repository.findByAuthor(author);
+
     }
 
 
