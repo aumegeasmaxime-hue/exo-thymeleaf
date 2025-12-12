@@ -12,28 +12,28 @@
         </div>
     </header>
     <main>
-    <div id="divBoutonCree">
-        <a th:href="@{/new}"><button id="boutonCree">Crée nouvel article</button></a>
+    <div id="div-bouton-cree">
+        <a th:href="@{/new}"><button class="bouton" id="bouton-cree">Crée nouvel article</button></a>
     </div>
 
-        <div th:each="model :${models} " id="divGenList">
-            <div id="divTitreAuthor">
-                <span  class="marginLeft">Titre:</span>
-                <a th:href="@{/{id}(id=${model.id})}"><button th:text="${model.title}"></button></a>
+        <div th:each="model :${models} " id="div-gen-list">
+            <div id="div-titre-author">
+                <span  class="margin-left">Titre:</span>
+                <a th:href="@{/{id}(id=${model.id})}"><button th:text="${model.title}" class="bouton"></button></a>
                 <span class="marginLeft">Auteur:</span>
-                <span th:text="${model.author}"></span>
+                <span th:text="${model.author}" id="txt-author"></span>
             </div>
             <div id="div-modifier-delete">
-                <a th:href="@{/{id}/modifier(id=${model.id})}"><button  >Modifier</button></a>
-                <a th:href="@{/{id}/delete(id=${model.id})}"><button  >Delete</button></a>
+                <a th:href="@{/{id}/modifier(id=${model.id})}"><button class="bouton">Modifier</button></a>
+                <a th:href="@{/{id}/delete(id=${model.id})}"><button class="bouton">Delete</button></a>
             </div>
         </div>
 
-    <div>
+    <div id="div-barre-search">
         <form th:action="@{/author}" method="get">
-        <label for="author">recherce d'article par auteur:</label>
-        <input type="text"  id="author" name="author"/>
-        <button>Search</button>
+        <label for="author"></label>
+        <input placeholder="auteur:*" type="text"  id="author" name="author"/>
+        <button class="bouton">Search</button>
         </form>
     </div>
 
