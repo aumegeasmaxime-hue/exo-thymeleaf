@@ -13,12 +13,12 @@
     </header>
     <main>
     <div>
-        <a th:href="@{/new}"><button class="bouton">Crée nouvel article</button></a>
+        <a th:href="@{/new}"><button id="bouton">Crée nouvel article</button></a>
     </div>
     <div th:each="model :${models} ">
-        <a th:href="@{/{id}(id=${model.id})}"><button th:text="${model.title}" id="boutonTitre"></button></a>
+        <a th:href="@{/{id}(id=${model.id})}"><button th:text="${model.title}" ></button></a>
         <span th:text="${model.author}"></span>
-        <a th:href="@{/{id}/modifier(id=${model.id})}"><button class="bouton">Modifier</button></a>
+        <a th:href="@{/{id}/modifier(id=${model.id})}"><button >Modifier</button></a>
         <a th:href="@{/{id}/delete(id=${model.id})}"><button class="bouton">Delete</button></a>
     </div>
     <div>

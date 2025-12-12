@@ -1,3 +1,5 @@
+/* css index */
+
 #entete {
     background-color:red;
     display: flex;
@@ -8,11 +10,22 @@
     border-radius: 20px;
 }
 #boutonTitre {
-    font-size: 20px;
-    font-family: Arial, sans-serif;
-}
-.bouton {
-    font-size: 12px;
-    font-family: Arial, sans-serif;
+    font-size: 15px
+    font-family:
 
+
+
+}
+#bouton {
+font-size: 80px;
+}
+#contenu {
+    font-size: 15px;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid dodgerblue;
+    border-radius: 8px;
+    padding: 4px;
+    resize: none;
 }

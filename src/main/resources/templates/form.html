@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulaire</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
 <body>
 <div>
     <form th:action="${article.id == null ? '/new' : '/' + article.id + '/modifier'}" th:object="${article}" method="post">
         <label for="title">Titre: </label>
         <input type="text" th:field="*{title}" id="title">
+
         <label for="author">Auteur: </label>
         <input type="text" th:field="*{author}" id="author">
-        <label for="contenu">Article: </label>
-        <input type="text" th:field="*{contenu}" id="contenu">
+
+        <label for="contenu" >Article: </label>
+        <textarea type="text" th:field="*{contenu}" id="contenu"></textarea>
+
         <button type="submit">Envoyer</button>
     </form>
 </div>
