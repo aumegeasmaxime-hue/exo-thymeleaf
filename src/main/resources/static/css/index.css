@@ -72,7 +72,7 @@
     width: 100%;
     height: 100px;
     box-sizing: border-box;
-    border: 2px solid dodgerblue;
+    border: 2px solid   dodgerblue;
     border-radius: 8px;
     padding: 4px;
     resize: none;
@@ -101,3 +101,36 @@
     padding-right: 4px;
     background-color:#850000;
 }
+#div-titre-autor {
+    margin-left: 10%;
+}
+#title {
+    font-size: 10px;
+    font-family: Apple Chancery, cursive;
+    color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color:#850000;
+}
+#div-contenu {
+    width: 70%;
+    margin-left: 15%;
+}
+#contenu {
+    font-size: 10px;
+    font-family: Apple Chancery, cursive;
+    color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color:#850000;
+}
+#div-bouton-search {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
