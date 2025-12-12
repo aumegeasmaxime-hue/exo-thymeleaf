@@ -5,22 +5,30 @@
     <title>Mon Blog</title>
     <link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
-<body>
+<body id="font-color">
     <header>
         <div>
             <h2 id="entete">Mon Blog</h2>
         </div>
     </header>
     <main>
-    <div>
-        <a th:href="@{/new}"><button id="bouton">Crée nouvel article</button></a>
+    <div id="divBoutonCree">
+        <a th:href="@{/new}"><button id="boutonCree">Crée nouvel article</button></a>
     </div>
-    <div th:each="model :${models} ">
-        <a th:href="@{/{id}(id=${model.id})}"><button th:text="${model.title}" ></button></a>
-        <span th:text="${model.author}"></span>
-        <a th:href="@{/{id}/modifier(id=${model.id})}"><button >Modifier</button></a>
-        <a th:href="@{/{id}/delete(id=${model.id})}"><button class="bouton">Delete</button></a>
-    </div>
+
+        <div th:each="model :${models} " id="divGenList">
+            <div id="divTitreAuthor">
+                <span  class="marginLeft">Titre:</span>
+                <a th:href="@{/{id}(id=${model.id})}"><button th:text="${model.title}"></button></a>
+                <span class="marginLeft">Auteur:</span>
+                <span th:text="${model.author}"></span>
+            </div>
+            <div id="div-modifier-delete">
+                <a th:href="@{/{id}/modifier(id=${model.id})}"><button  >Modifier</button></a>
+                <a th:href="@{/{id}/delete(id=${model.id})}"><button  >Delete</button></a>
+            </div>
+        </div>
+
     <div>
         <form th:action="@{/author}" method="get">
         <label for="author">recherce d'article par auteur:</label>
